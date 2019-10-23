@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "author": "J.R.R. Tolkien",
+    "title": "The Hobbit",
+    "stock": 3
+  },
+  {
+    "id": 2,
+    "author": "J.R.R. Tolkien",
+    "title": "The Lord Of The Rings",
+    "stock": 2
+  }
+]

@@ -1,6 +1,19 @@
 import React from 'react';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 import {Section, Table} from "react-bulma-components";
+import BookRow from "./BookRow";
+
+let books = [{
+    id: 1,
+    author: 'J.R.R. Tolkien',
+    title: 'The Hobbit',
+    stock: 3
+}, {
+    id: 2,
+    author: 'J.R.R. Tolkien',
+    title: 'The Lord Of The Rings',
+    stock: 2
+}];
 
 export default () => (
     <Section>
@@ -14,18 +27,9 @@ export default () => (
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th>1</th>
-                <td>J.R.R. Tolkien</td>
-                <td>The Hobbit</td>
-                <th>3</th>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>J.R.R. Tolkien</td>
-                <td>The Lord Of The Rings</td>
-                <th>1</th>
-            </tr>
+            {books.map((book) =>
+                <BookRow key={book.id} book={book}/>
+            )}
             </tbody>
         </Table>
     </Section>
