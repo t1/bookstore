@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'react-bulma-components/dist/react-bulma-components.min.css';
+import {Container} from 'react-bulma-components';
+import AppHeader from "./AppHeader";
+import AppBody from "./BookTable";
 
-function App() {
+export default function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>Bookstore</p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
+        <Container>
+            <AppHeader/>
+            <AppBody/>
+        </Container>
     );
 }
-
-export default App;
