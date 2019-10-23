@@ -6,6 +6,7 @@ describe('My First Test', () => {
         //     body: '...'
         // });
         // cy.log('hi');
+        cy.server();
         cy.route('GET', 'http://localhost:8080/books', 'fixture:books.json')
     });
 
