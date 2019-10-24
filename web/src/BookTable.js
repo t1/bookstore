@@ -34,7 +34,10 @@ class BookTable extends React.Component {
             // fetch can't be stubbed by Cypress (and the workaround doesn't work for me)
             // see https://github.com/cypress-io/cypress/issues/95
             fetch(booksUrl)
-                .then(res => res.json())
+                .then(res => {
+                    if (res.ok) return res.json();
+                    else throw new Error(res.statusText);
+                })
                 .then(
                     (result) => { this.setLoaded(result) },
                     (error) => { this.setError(error.message) }
@@ -66,11 +69,13 @@ class BookTable extends React.Component {
     render() {
         let {error, isLoaded, books} = this.state;
         if (error) {
-            return <Box><Section><Heading>
+            return <Box><Section><Heading id="#message">
                 Error while loading books: {error.message}
             </Heading></Section></Box>;
         } else if (!isLoaded) {
-            return <Button fullwidth loading isStatic/>;
+            return <Button id="#loading" fullwidth loading isStatic/>;
+        } else if (books && books.length === 0) {
+            return <Button id="message" fullwidth isStatic>No Books In Stock</Button>;
         } else {
             return (
                 <Table>
