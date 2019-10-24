@@ -1,12 +1,9 @@
 package test;
 
-import com.github.t1.jaxrsclienttest.JaxRsTestExtension;
 import org.example.bookstore.Book;
 import org.example.bookstore.BookStore;
-import org.example.bookstore.BooksBoundary;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.RegisterExtension;
 
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.Response;
