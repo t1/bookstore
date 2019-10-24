@@ -28,8 +28,13 @@ class BookTable extends React.Component {
     }
 
     componentDidMount() {
-        let booksUrl = "http://localhost:8080/books";
-        let useFetch = false;
+        let useAws = true;
+        let useFetch = true;
+
+        let booksUrl = useAws
+            ? "https://t1-books.s3.eu-central-1.amazonaws.com/books.json"
+            : "http://localhost:8080/books"
+        ;
         if (useFetch) {
             // fetch can't be stubbed by Cypress (and the workaround doesn't work for me)
             // see https://github.com/cypress-io/cypress/issues/95

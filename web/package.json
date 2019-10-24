@@ -1,6 +1,7 @@
 {
   "name": "web",
   "version": "0.1.0",
+  "homepage": "https://t1-books.s3.eu-central-1.amazonaws.com/web",
   "private": true,
   "dependencies": {
     "react": "^16.11.0",
