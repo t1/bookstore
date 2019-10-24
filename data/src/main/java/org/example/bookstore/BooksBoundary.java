@@ -1,6 +1,5 @@
 package org.example.bookstore;
 
-import com.github.t1.log.Logged;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.eclipse.microprofile.metrics.annotation.Timed;
@@ -14,12 +13,11 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import java.util.List;
 
-import static com.github.t1.log.LogLevel.INFO;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 
 @Stateless
 @Path("/")
-@Timed @Logged(level = INFO)
+@Timed
 @Produces(APPLICATION_JSON)
 @NoArgsConstructor @AllArgsConstructor
 public class BooksBoundary {
