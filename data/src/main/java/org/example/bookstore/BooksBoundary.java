@@ -1,6 +1,8 @@
 package org.example.bookstore;
 
 import com.github.t1.log.Logged;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 
 import javax.ejb.Stateless;
@@ -19,6 +21,7 @@ import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 @Path("/")
 @Timed @Logged(level = INFO)
 @Produces(APPLICATION_JSON)
+@NoArgsConstructor @AllArgsConstructor
 public class BooksBoundary {
     @Inject BookStore store;
 
