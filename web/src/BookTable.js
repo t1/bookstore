@@ -28,7 +28,7 @@ class BookTable extends React.Component {
     }
 
     componentDidMount() {
-        let useAws = true;
+        let useAws = false;
         let useFetch = true;
 
         let booksUrl = useAws
