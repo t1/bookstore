@@ -90,5 +90,11 @@
             <version>1.2.3</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.t1</groupId>
+            <artifactId>jax-rs-test-extension</artifactId>
+            <version>1.0.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>
